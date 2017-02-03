@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Bullhorn Beta",
+    "version": "0.0.1",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.bullhornstaffing.com/*",
+                "*://*.bullhorn.com/*"
+            ],
+            "js": ["content.js"]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "cookies",
+        "*://*.bullhornstaffing.com/*",
+        "*://*.bullhorn.com/*"
+    ],
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "background": {
+        "scripts": ["background.js"]
+    }
+}
